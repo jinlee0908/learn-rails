@@ -79,7 +79,7 @@ LearnRails::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   #email enabled in production
-  config.action_mailer.default_url_options = {:host => ENV["DOMAIN_NAME"]}
+  config.action_mailer.default_url_options = { :host => ENV["DOMAIN_NAME"] }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
@@ -87,7 +87,7 @@ LearnRails::Application.configure do
     address: "smtp.gmail.com",
     port: 587,
     domain: ENV["DOMAIN_NAME"],
-    authenication: "plain",
+    authentication: "plain",
     enable_starttls_auto: true,
     user_name: ENV["GMAIL_USERNAME"],
     password: ENV["GMAIL_PASSWORD"]
