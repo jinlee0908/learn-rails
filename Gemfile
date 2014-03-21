@@ -20,6 +20,7 @@ gem 'gibbon'
 gem 'google_drive'
 gem 'high_voltage'
 gem 'simple_form'
+
 group :development do
 	gem 'better_errors'
 	gem 'quiet_assets'
@@ -30,6 +31,9 @@ group :production do
 	gem 'rails_12factor'
 	gem 'thin'
 end
+
+#added to hopefully fix Heroku error message : Could not find thread_safe-0.3.0 in any of the sources
+gem 'thread_safe', '0.2.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
